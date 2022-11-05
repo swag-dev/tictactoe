@@ -22,7 +22,8 @@ resetGameModal = document.querySelectorAll('.next-round'),
 turn = x,
 possibleWins = ['123', '456', '789', '147', '258', '369', '159', '357'],
 games = ['', ''],
-won = [false, 0]
+won = [false, 0],
+tie = false,
 scores = [0, 0, 0]
 
 turnInd.innerHTML = fadedX
@@ -67,6 +68,7 @@ blocks.forEach((block, blockIndex) => {
         checkIfWon()
         if(clicks === 9 && !won[0]) {
             turn = !turn
+            tie = true
             tieModal.style.display = 'flex'
             ++scores[1]
             allScores[1].textContent = scores[1]
@@ -111,3 +113,9 @@ function checkIfWon() {
         }
     })
     }
+    document.addEventListener('scroll', () => {
+        if(won[0] || tie){
+            wonModal.style.display = 'none'
+            tieModal.style.display = 'none'
+        }
+    })

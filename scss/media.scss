@@ -25,6 +25,19 @@
                 }
             }
         }
+        .won-modal{
+            .message{
+                .container{
+                    .winner{
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

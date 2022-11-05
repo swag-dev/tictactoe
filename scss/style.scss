@@ -196,6 +196,8 @@ body{
                     }
                     .winner{
                         display: flex;
+                        justify-content: center;
+                        align-items: center;
                         margin: 20px 0;
                         p{
                             font-weight: 700;
