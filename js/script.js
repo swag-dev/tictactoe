@@ -24,14 +24,17 @@ possibleWins = ['123', '456', '789', '147', '258', '369', '159', '357'],
 games = ['', ''],
 won = [false, 0],
 tie = false,
-scores = [0, 0, 0]
+scores = [0, 0, 0],
+player1 = null,
+player2 = null
 
 turnInd.innerHTML = fadedX
 function resetGame(){
     games = ['', '']
     clicks = 0
     won = [false, 0]
-    turn = x
+    turn === x
+    turnInd.innerHTML = fadedX
     turnInd.innerHTML = fadedX
     blocks.forEach(block => {
         block.innerHTML = ''
